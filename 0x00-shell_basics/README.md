@@ -1,1 +1,2 @@
-Not empty
+Not empty \n
+Another one \n
