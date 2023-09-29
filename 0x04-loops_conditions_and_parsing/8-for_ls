@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Bash script that displays content of dir
+
+for f in *;
+do
+	if [[ ! "$f" =~ ^\. ]];
+then
+	name=$(echo "$f" | cut -d'_' -f2-)
+	echo "- $name"
+fi
+done
