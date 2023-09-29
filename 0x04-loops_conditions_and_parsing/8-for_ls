@@ -3,9 +3,6 @@
 
 for f in *;
 do
-	if [[ ! "$f" =~ ^\. ]];
-then
 	name=$(echo "$f" | cut -d'_' -f2-)
-	echo "- $name"
-fi
+	echo "$name"
 done
