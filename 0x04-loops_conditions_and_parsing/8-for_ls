@@ -2,5 +2,5 @@
 #Bash script that displays content of dir
 
 for file in *; do
-	echo "$file" | cut -d '_' -f 2-
+	echo "$file" | cut -d '-' -f 2-
 done
