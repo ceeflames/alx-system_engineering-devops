@@ -3,14 +3,5 @@
 
 for file in *;
 do
-	if [ -f "$file" ];
-	then
-		file_without_dash="${file#*-}"
-
-	if [ "$file_without_dash" != "$file" ];
-	then
-		echo "$file_without_dash"
-
-	fi
-	fi
+	echo "$file" | cut -d '_' -f 2-
 done
