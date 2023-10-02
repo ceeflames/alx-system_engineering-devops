@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 #Bash script that displays content of dir
 
-list=$(ls)
-for f in $list;
+for file in *;
 do
-	name=$(echo "$f" | cut -d'_' -f2-)
-	echo "$name"
+	if [ -f "$file" ];
+	then
+		file_without_dash="${file#*-}"
+
+	if [ "$file_without_dash" != "$file" ];
+	then
+		echo "$file_without_dash"
+
+	fi
+	fi
 done
