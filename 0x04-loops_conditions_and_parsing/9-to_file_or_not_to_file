@@ -6,6 +6,7 @@ if [ -e "$file" ]; then
 	echo "$file file exists"
 else
 	echo "$file file does not exist"
+	exit
 fi
 if [ -s "$file" ]; then
 	echo "$file file is not empty"
