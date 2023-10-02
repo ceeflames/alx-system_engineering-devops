@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that stops 4-to_infinity_and_beyond process.
+
+#failed shellcheck
+#ps aux | grep 4- | head -1 | kill -s 15 $(awk '{print $2}')
+
+kill -s 15 "$(pgrep -f 4-to_infinity_and_beyond)"
