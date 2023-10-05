@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash scripts that listen to a port
+
+nc -l 98
