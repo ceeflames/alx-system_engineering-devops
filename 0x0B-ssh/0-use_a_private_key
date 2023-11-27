@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# SSH to connect to my server using ip
 
 ssh -i ~/.ssh/school ubuntu@54.87.172.220
