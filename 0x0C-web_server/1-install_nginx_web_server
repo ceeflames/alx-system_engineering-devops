@@ -7,5 +7,6 @@ sudo apt-get install -y nginx
 
 echo '<html><body><h1>Hello World!</h1></body></html>' > /var/www/html/index.html
 
-sudo sed -i 's/.*listen 80.*/listen 80;/g'
+sudo sed -i 's/.*listen 80.*/listen 80;/g' /etc/nginx/sites-available/default
+
 sudo /etc/init.d/nginx restart
