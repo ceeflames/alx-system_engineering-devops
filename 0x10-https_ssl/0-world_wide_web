@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Configure the domain so that the subdomain www, display information about subdomaina
 
-if [ "$#" = 1 ];
+if ["$#" = 1];
 then
 	subdomains=("www" "lb-01" "web-01" "web-02")
 	for sub_domain in "${subdomains[@]}";
@@ -10,7 +10,7 @@ then
 		dest=$(dig "$sub_domain"."$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk "{print $5}")
 		echo "The subdomain $sub_domain is a $record_types record and points to $dest"
 	done
-elif [ "$#" = 2 ];
+elif ["$#" = 2];
 then
 	record_types=$(dig "$2"."$1" | grep -A "ANSWER SECTION" | tail -1 | awk "{print $4}")
 	dest=$(dig "$2"."$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk "{print $5}")
